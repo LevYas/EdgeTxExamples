@@ -1,0 +1,1324 @@
+semver: 2.8.2
+header:
+  name: OMPHOBBY M2 V2
+  bitmap: OH-M2-1.png
+  labels: ""
+  modelId:
+    0:
+      val: 3
+timers:
+  0:
+    swtch: SD0
+    mode: ON
+    name: ""
+    minuteBeep: 1
+    countdownBeep: 0
+    start: 300
+    persistent: 0
+    countdownStart: 0
+    value: 0
+    showElapsed: 0
+  2:
+    swtch: NONE
+    mode: ON
+    name: ""
+    minuteBeep: 0
+    countdownBeep: 0
+    start: 0
+    persistent: 1
+    countdownStart: -1
+    value: 30
+    showElapsed: 0
+noGlobalFunctions: 0
+thrTrim: 0
+trimInc: 0
+displayTrims: 0
+ignoreSensorIds: 0
+disableThrottleWarning: 1
+enableCustomThrottleWarning: 0
+customThrottleWarningPosition: 0
+beepANACenter: 0
+extendedLimits: 1
+extendedTrims: 0
+throttleReversed: 0
+flightModeData:
+  0:
+    name: Hold
+    fadeIn: 0
+    fadeOut: 0
+    gvars:
+      7:
+        val: 267
+  1:
+    swtch: SA2
+    name: 1 - Normal
+    fadeIn: 0
+    fadeOut: 0
+  2:
+    swtch: SA1
+    name: 2 - Idle1
+    fadeIn: 0
+    fadeOut: 0
+  3:
+    swtch: SA0
+    name: 3 - Idle2
+    fadeIn: 0
+    fadeOut: 0
+mixData:
+  - destCh: 0
+    srcRaw: I0
+    weight: 100
+    swtch: NONE
+    curve:
+      type: 0
+      value: 0
+    delayUp: 0
+    delayDown: 0
+    speedUp: 0
+    speedDown: 0
+    carryTrim: 0
+    mltpx: ADD
+    mixWarn: 0
+    flightModes: 000000000
+    offset: 0
+    name: Ailer
+  - destCh: 1
+    srcRaw: I1
+    weight: 100
+    swtch: NONE
+    curve:
+      type: 0
+      value: 0
+    delayUp: 0
+    delayDown: 0
+    speedUp: 0
+    speedDown: 0
+    carryTrim: 0
+    mltpx: ADD
+    mixWarn: 0
+    flightModes: 000000000
+    offset: 0
+    name: Elev
+  - destCh: 2
+    srcRaw: I2
+    weight: 100
+    swtch: NONE
+    curve:
+      type: 0
+      value: 0
+    delayUp: 0
+    delayDown: 0
+    speedUp: 0
+    speedDown: 0
+    carryTrim: 0
+    mltpx: REPL
+    mixWarn: 0
+    flightModes: 000000000
+    offset: 0
+    name: Pitch
+  - destCh: 2
+    srcRaw: MAX
+    weight: 60
+    swtch: L28
+    curve:
+      type: 0
+      value: 0
+    delayUp: 0
+    delayDown: 0
+    speedUp: 0
+    speedDown: 10
+    carryTrim: 0
+    mltpx: REPL
+    mixWarn: 0
+    flightModes: 000000000
+    offset: 0
+    name: Resque
+  - destCh: 3
+    srcRaw: I3
+    weight: 100
+    swtch: NONE
+    curve:
+      type: 0
+      value: 0
+    delayUp: 0
+    delayDown: 0
+    speedUp: 0
+    speedDown: 0
+    carryTrim: 0
+    mltpx: ADD
+    mixWarn: 0
+    flightModes: 000000000
+    offset: 0
+    name: Rudder
+  - destCh: 4
+    srcRaw: I4
+    weight: 100
+    swtch: NONE
+    curve:
+      type: 0
+      value: 0
+    delayUp: 0
+    delayDown: 0
+    speedUp: 0
+    speedDown: 0
+    carryTrim: 0
+    mltpx: ADD
+    mixWarn: 0
+    flightModes: 000000000
+    offset: 0
+    name: HoldOf
+  - destCh: 4
+    srcRaw: MAX
+    weight: 100
+    swtch: "!SD0"
+    curve:
+      type: 0
+      value: 0
+    delayUp: 0
+    delayDown: 0
+    speedUp: 0
+    speedDown: 0
+    carryTrim: 0
+    mltpx: REPL
+    mixWarn: 0
+    flightModes: 000000000
+    offset: 0
+    name: HoldOn
+  - destCh: 5
+    srcRaw: I5
+    weight: 100
+    swtch: NONE
+    curve:
+      type: 0
+      value: 0
+    delayUp: 0
+    delayDown: 0
+    speedUp: 0
+    speedDown: 0
+    carryTrim: 0
+    mltpx: ADD
+    mixWarn: 0
+    flightModes: 000000000
+    offset: 0
+    name: Idle
+  - destCh: 6
+    srcRaw: I6
+    weight: 100
+    swtch: NONE
+    curve:
+      type: 0
+      value: 0
+    delayUp: 0
+    delayDown: 0
+    speedUp: 0
+    speedDown: 0
+    carryTrim: 0
+    mltpx: ADD
+    mixWarn: 0
+    flightModes: 000000000
+    offset: 0
+    name: 3dMode
+  - destCh: 6
+    srcRaw: MAX
+    weight: -100
+    swtch: "!SB0"
+    curve:
+      type: 0
+      value: 0
+    delayUp: 0
+    delayDown: 0
+    speedUp: 0
+    speedDown: 0
+    carryTrim: 0
+    mltpx: REPL
+    mixWarn: 0
+    flightModes: 000000000
+    offset: 0
+    name: Resque
+limitData:
+  0:
+    min: 0
+    max: 0
+    revert: 0
+    offset: 0
+    ppmCenter: 0
+    symetrical: 0
+    name: Ailer
+    curve: 0
+  1:
+    min: 0
+    max: 0
+    revert: 0
+    offset: 0
+    ppmCenter: 0
+    symetrical: 0
+    name: Elev
+    curve: 0
+  2:
+    min: 0
+    max: 0
+    revert: 0
+    offset: 0
+    ppmCenter: 0
+    symetrical: 0
+    name: Pitch
+    curve: 0
+  3:
+    min: 0
+    max: 0
+    revert: 0
+    offset: 0
+    ppmCenter: 0
+    symetrical: 0
+    name: Rudder
+    curve: 0
+  4:
+    min: 0
+    max: 0
+    revert: 0
+    offset: 0
+    ppmCenter: 0
+    symetrical: 0
+    name: Hold
+    curve: 0
+  5:
+    min: 0
+    max: 0
+    revert: 0
+    offset: 0
+    ppmCenter: 0
+    symetrical: 0
+    name: Idle
+    curve: 0
+  6:
+    min: 0
+    max: 0
+    revert: 0
+    offset: 0
+    ppmCenter: 0
+    symetrical: 0
+    name: StMode
+    curve: 0
+  7:
+    min: 0
+    max: 0
+    revert: 0
+    offset: 0
+    ppmCenter: 0
+    symetrical: 0
+    name: CH8
+    curve: 0
+  8:
+    min: 0
+    max: 0
+    revert: 0
+    offset: 0
+    ppmCenter: 0
+    symetrical: 0
+    name: CH9
+    curve: 0
+  9:
+    min: 0
+    max: 0
+    revert: 0
+    offset: 0
+    ppmCenter: 0
+    symetrical: 0
+    name: CH10
+    curve: 0
+  10:
+    min: 0
+    max: 0
+    revert: 0
+    offset: 0
+    ppmCenter: 0
+    symetrical: 0
+    name: CH11
+    curve: 0
+  11:
+    min: 0
+    max: 0
+    revert: 0
+    offset: 0
+    ppmCenter: 0
+    symetrical: 0
+    name: CH12
+    curve: 0
+  12:
+    min: 0
+    max: 0
+    revert: 0
+    offset: 0
+    ppmCenter: 0
+    symetrical: 0
+    name: CH13
+    curve: 0
+  13:
+    min: 0
+    max: 0
+    revert: 0
+    offset: 0
+    ppmCenter: 0
+    symetrical: 0
+    name: CH14
+    curve: 0
+  14:
+    min: 0
+    max: 0
+    revert: 0
+    offset: 0
+    ppmCenter: 0
+    symetrical: 0
+    name: CH15
+    curve: 0
+  15:
+    min: 0
+    max: 0
+    revert: 0
+    offset: 0
+    ppmCenter: 0
+    symetrical: 0
+    name: CH16
+    curve: 0
+expoData:
+  - srcRaw: Ail
+    scale: 0
+    mode: 3
+    chn: 0
+    swtch: SC0
+    flightModes: 000000000
+    weight: 100
+    offset: 0
+    curve:
+      type: 3
+      value: 1
+    trimSource: 0
+    name: ""
+  - srcRaw: Ail
+    scale: 0
+    mode: 3
+    chn: 0
+    swtch: SC1
+    flightModes: 000000000
+    weight: 100
+    offset: 0
+    curve:
+      type: 3
+      value: 2
+    trimSource: 0
+    name: ""
+  - srcRaw: Ail
+    scale: 0
+    mode: 3
+    chn: 0
+    swtch: SC2
+    flightModes: 000000000
+    weight: 100
+    offset: 0
+    curve:
+      type: 3
+      value: 3
+    trimSource: 0
+    name: ""
+  - srcRaw: Ele
+    scale: 0
+    mode: 3
+    chn: 1
+    swtch: SC0
+    flightModes: 000000000
+    weight: 100
+    offset: 0
+    curve:
+      type: 3
+      value: 1
+    trimSource: 0
+    name: ""
+  - srcRaw: Ele
+    scale: 0
+    mode: 3
+    chn: 1
+    swtch: SC1
+    flightModes: 000000000
+    weight: 100
+    offset: 0
+    curve:
+      type: 3
+      value: 2
+    trimSource: 0
+    name: ""
+  - srcRaw: Ele
+    scale: 0
+    mode: 3
+    chn: 1
+    swtch: SC2
+    flightModes: 000000000
+    weight: 100
+    offset: 0
+    curve:
+      type: 3
+      value: 3
+    trimSource: 0
+    name: ""
+  - srcRaw: Thr
+    scale: 0
+    mode: 3
+    chn: 2
+    swtch: NONE
+    flightModes: 000000000
+    weight: 100
+    offset: 0
+    curve:
+      type: 0
+      value: 0
+    trimSource: 0
+    name: ""
+  - srcRaw: Rud
+    scale: 0
+    mode: 3
+    chn: 3
+    swtch: SC0
+    flightModes: 000000000
+    weight: 100
+    offset: 0
+    curve:
+      type: 0
+      value: 0
+    trimSource: 0
+    name: ""
+  - srcRaw: Rud
+    scale: 0
+    mode: 3
+    chn: 3
+    swtch: SC1
+    flightModes: 000000000
+    weight: 90
+    offset: 0
+    curve:
+      type: 0
+      value: 0
+    trimSource: 0
+    name: ""
+  - srcRaw: Rud
+    scale: 0
+    mode: 3
+    chn: 3
+    swtch: SC2
+    flightModes: 000000000
+    weight: 75
+    offset: 0
+    curve:
+      type: 0
+      value: 0
+    trimSource: 0
+    name: ""
+  - srcRaw: MAX
+    scale: 0
+    mode: 3
+    chn: 4
+    swtch: NONE
+    flightModes: 000000000
+    weight: -100
+    offset: 0
+    curve:
+      type: 0
+      value: 0
+    trimSource: 0
+    name: ""
+  - srcRaw: MAX
+    scale: 0
+    mode: 3
+    chn: 5
+    swtch: NONE
+    flightModes: 111011111
+    weight: 100
+    offset: 0
+    curve:
+      type: 0
+      value: 0
+    trimSource: 0
+    name: ""
+  - srcRaw: MAX
+    scale: 0
+    mode: 3
+    chn: 5
+    swtch: NONE
+    flightModes: 110111111
+    weight: 0
+    offset: 0
+    curve:
+      type: 0
+      value: 0
+    trimSource: 0
+    name: ""
+  - srcRaw: MAX
+    scale: 0
+    mode: 3
+    chn: 5
+    swtch: NONE
+    flightModes: 101111111
+    weight: -100
+    offset: 0
+    curve:
+      type: 0
+      value: 0
+    trimSource: 0
+    name: ""
+  - srcRaw: MAX
+    scale: 0
+    mode: 3
+    chn: 6
+    swtch: NONE
+    flightModes: 000000000
+    weight: 100
+    offset: 0
+    curve:
+      type: 0
+      value: 0
+    trimSource: 0
+    name: ""
+inputNames:
+  0:
+    val: Ail
+  1:
+    val: Ele
+  2:
+    val: Pit
+  3:
+    val: Rud
+  4:
+    val: Hold
+  5:
+    val: Idle
+  6:
+    val: Mode
+curves:
+  0:
+    type: 1
+    smooth: 0
+    points: 1
+    name: DbH
+  1:
+    type: 1
+    smooth: 0
+    points: 1
+    name: DbM
+  2:
+    type: 1
+    smooth: 0
+    points: 1
+    name: DbL
+points:
+  0:
+    val: -100
+  1:
+    val: -8
+  2:
+    val: 0
+  3:
+    val: 0
+  4:
+    val: 8
+  5:
+    val: 100
+  6:
+    val: -1
+  7:
+    val: -1
+  8:
+    val: 1
+  9:
+    val: 1
+  10:
+    val: -90
+  11:
+    val: -8
+  12:
+    val: 0
+  13:
+    val: 0
+  14:
+    val: 8
+  15:
+    val: 90
+  16:
+    val: -1
+  17:
+    val: -1
+  18:
+    val: 1
+  19:
+    val: 1
+  20:
+    val: -75
+  21:
+    val: -8
+  22:
+    val: 0
+  23:
+    val: 0
+  24:
+    val: 8
+  25:
+    val: 75
+  26:
+    val: -1
+  27:
+    val: -1
+  28:
+    val: 1
+  29:
+    val: 1
+logicalSw:
+  0:
+    func: FUNC_STICKY
+    def: TELEMETRY_STREAMING,NONE
+    delay: 50
+    duration: 0
+    andsw: NONE
+  2:
+    func: FUNC_VNEG
+    def: tele(1),102
+    delay: 2
+    duration: 0
+    andsw: "!SD2"
+  5:
+    func: FUNC_VPOS
+    def: tele(1),120
+    delay: 0
+    duration: 0
+    andsw: NONE
+  6:
+    func: FUNC_AND
+    def: TELEMETRY_STREAMING,SD0
+    delay: 0
+    duration: 0
+    andsw: NONE
+  7:
+    func: FUNC_VNEG
+    def: tele(1),110
+    delay: 0
+    duration: 0
+    andsw: L7
+  8:
+    func: FUNC_STICKY
+    def: L6,L8
+    delay: 0
+    duration: 0
+    andsw: NONE
+  9:
+    func: FUNC_EDGE
+    def: L9,0,-
+    delay: 0
+    duration: 0
+    andsw: NONE
+  12:
+    func: FUNC_ANEG
+    def: ch(2),20
+    delay: 0
+    duration: 0
+    andsw: NONE
+  13:
+    func: FUNC_VNEG
+    def: I0,-90
+    delay: 0
+    duration: 0
+    andsw: SD2
+  14:
+    func: FUNC_VNEG
+    def: I1,-90
+    delay: 0
+    duration: 50
+    andsw: L14
+  15:
+    func: FUNC_AND
+    def: L13,L15
+    delay: 0
+    duration: 0
+    andsw: SD0
+  16:
+    func: FUNC_AND
+    def: "!SD0,NONE"
+    delay: 100
+    duration: 0
+    andsw: NONE
+  17:
+    func: FUNC_STICKY
+    def: L16,L17
+    delay: 0
+    duration: 0
+    andsw: NONE
+  21:
+    func: FUNC_AND
+    def: L18,SD0
+    delay: 0
+    duration: 0
+    andsw: NONE
+  23:
+    func: FUNC_EDGE
+    def: L18,200,-
+    delay: 0
+    duration: 0
+    andsw: NONE
+  24:
+    func: FUNC_STICKY
+    def: L24,NONE
+    delay: 0
+    duration: 0
+    andsw: NONE
+  25:
+    func: FUNC_AND
+    def: L25,!TELEMETRY_STREAMING
+    delay: 100
+    duration: 0
+    andsw: NONE
+  27:
+    func: FUNC_AND
+    def: "!SB0,NONE"
+    delay: 3
+    duration: 6
+    andsw: NONE
+customFn:
+  0:
+    swtch: "!SD0"
+    func: PLAY_TRACK
+    def: thrhld,!1x
+  1:
+    swtch: FM1
+    func: PLAY_TRACK
+    def: hvrmd,1x
+  2:
+    swtch: FM2
+    func: PLAY_TRACK
+    def: idlup1,1x
+  3:
+    swtch: FM3
+    func: PLAY_TRACK
+    def: idlup2,1x
+  4:
+    swtch: L22
+    func: PLAY_TRACK
+    def: turnon,1x
+  6:
+    swtch: "!SB0"
+    func: PLAY_TRACK
+    def: oops,1x
+  7:
+    swtch: SB0
+    func: PLAY_TRACK
+    def: stblof,!1x
+  9:
+    swtch: L1
+    func: LOGS
+    def: 5
+  11:
+    swtch: L3
+    func: PLAY_TRACK
+    def: batlow,3
+  13:
+    swtch: L10
+    func: ADJUST_GVAR
+    def: 7,IncDec,1,1
+  15:
+    swtch: "!L18"
+    func: OVERRIDE_CHANNEL
+    def: 4,100,1
+  16:
+    swtch: "!L18"
+    func: PLAY_TRACK
+    def: thrdis,1x
+  18:
+    swtch: L26
+    func: RESET
+    def: All,1
+  19:
+    swtch: L26
+    func: PLAY_TRACK
+    def: liketh,1x
+  20:
+    swtch: SH2
+    func: RESET
+    def: All,1
+  22:
+    swtch: SC0
+    func: PLAY_TRACK
+    def: hirat,!1x
+  23:
+    swtch: SC1
+    func: PLAY_TRACK
+    def: midrat,1x
+  24:
+    swtch: SC2
+    func: PLAY_TRACK
+    def: lowrat,1x
+  26:
+    swtch: ON
+    func: PLAY_SCRIPT
+    def: LogMy
+swashR:
+  type: TYPE_NONE
+  value: 0
+  collectiveSource: NONE
+  aileronSource: NONE
+  elevatorSource: NONE
+  collectiveWeight: 0
+  aileronWeight: 0
+  elevatorWeight: 0
+thrTraceSrc: Thr
+switchWarningState: A-BuCuDd
+thrTrimSw: 0
+potsWarnMode: WARN_OFF
+jitterFilter: GLOBAL
+potsWarnEnabled: 0
+displayChecklist: 0
+gvars:
+  7:
+    name: FNM
+    min: 1024
+    max: 0
+    popup: 0
+    prec: 0
+    unit: 0
+  8:
+    name: ""
+    min: 1024
+    max: 0
+    popup: 0
+    prec: 0
+    unit: 0
+telemetryProtocol: 0
+varioData:
+  source: none
+  centerSilent: 0
+  centerMax: 0
+  centerMin: 0
+  min: 0
+  max: 0
+rssiSource: none
+rfAlarms:
+  warning: 15
+  critical: 12
+disableTelemetryWarning: 0
+moduleData:
+  0:
+    type: TYPE_MULTIMODULE
+    subType: 77,0
+    channelsStart: 0
+    channelsCount: 16
+    failsafeMode: NOPULSES
+    mod:
+      multi:
+        disableTelemetry: 0
+        disableMapping: 0
+        autoBindMode: 0
+        lowPowerMode: 0
+        optionValue: 6
+trainerData:
+  mode: MASTER_TRAINER_JACK
+  channelsStart: 0
+  channelsCount: -8
+  frameLength: 0
+  delay: 0
+  pulsePol: 0
+telemetrySensors:
+  0:
+    type: TYPE_CUSTOM
+    id1:
+      id: 241
+    subId: 0
+    id2:
+      instance: 0
+    label: A1
+    unit: 1
+    prec: 1
+    autoOffset: 0
+    filter: 1
+    logs: 1
+    persistent: 0
+    onlyPositive: 0
+    cfg:
+      custom:
+        ratio: 127
+        offset: 6
+  1:
+    type: TYPE_CUSTOM
+    id1:
+      id: 242
+    subId: 0
+    id2:
+      instance: 0
+    label: A2
+    unit: 1
+    prec: 1
+    autoOffset: 0
+    filter: 1
+    logs: 1
+    persistent: 0
+    onlyPositive: 0
+    cfg:
+      custom:
+        ratio: 127
+        offset: 6
+  2:
+    type: TYPE_CUSTOM
+    id1:
+      id: 240
+    subId: 0
+    id2:
+      instance: 0
+    label: RSSI
+    unit: 0
+    prec: 0
+    autoOffset: 0
+    filter: 1
+    logs: 1
+    persistent: 0
+    onlyPositive: 0
+    cfg:
+      custom:
+        ratio: 0
+        offset: 0
+  3:
+    type: TYPE_CUSTOM
+    id1:
+      id: 65534
+    subId: 0
+    id2:
+      instance: 0
+    label: TRSS
+    unit: 17
+    prec: 0
+    autoOffset: 0
+    filter: 1
+    logs: 1
+    persistent: 0
+    onlyPositive: 0
+    cfg:
+      custom:
+        ratio: 0
+        offset: 0
+  4:
+    type: TYPE_CUSTOM
+    id1:
+      id: 65532
+    subId: 0
+    id2:
+      instance: 0
+    label: RQly
+    unit: 0
+    prec: 0
+    autoOffset: 0
+    filter: 1
+    logs: 1
+    persistent: 0
+    onlyPositive: 0
+    cfg:
+      custom:
+        ratio: 0
+        offset: 0
+  5:
+    type: TYPE_CUSTOM
+    id1:
+      id: 65533
+    subId: 0
+    id2:
+      instance: 0
+    label: TQly
+    unit: 0
+    prec: 0
+    autoOffset: 0
+    filter: 1
+    logs: 1
+    persistent: 0
+    onlyPositive: 0
+    cfg:
+      custom:
+        ratio: 0
+        offset: 0
+  6:
+    type: TYPE_CUSTOM
+    id1:
+      id: 20769
+    subId: 0
+    id2:
+      instance: 127
+    label: FlCN
+    unit: 0
+    prec: 0
+    autoOffset: 0
+    filter: 0
+    logs: 1
+    persistent: 0
+    onlyPositive: 0
+    cfg:
+      custom:
+        ratio: 0
+        offset: 0
+  7:
+    type: TYPE_CUSTOM
+    id1:
+      id: 20770
+    subId: 0
+    id2:
+      instance: 127
+    label: FlCO
+    unit: 0
+    prec: 0
+    autoOffset: 0
+    filter: 0
+    logs: 1
+    persistent: 0
+    onlyPositive: 0
+    cfg:
+      custom:
+        ratio: 0
+        offset: 0
+  8:
+    type: TYPE_CUSTOM
+    id1:
+      id: 20771
+    subId: 0
+    id2:
+      instance: 127
+    label: Stky
+    unit: 0
+    prec: 0
+    autoOffset: 0
+    filter: 0
+    logs: 1
+    persistent: 0
+    onlyPositive: 0
+    cfg:
+      custom:
+        ratio: 0
+        offset: 0
+  9:
+    type: TYPE_CUSTOM
+    id1:
+      id: 20772
+    subId: 0
+    id2:
+      instance: 127
+    label: LV
+    unit: 0
+    prec: 0
+    autoOffset: 0
+    filter: 0
+    logs: 1
+    persistent: 0
+    onlyPositive: 0
+    cfg:
+      custom:
+        ratio: 0
+        offset: 0
+  10:
+    type: TYPE_CUSTOM
+    id1:
+      id: 20773
+    subId: 0
+    id2:
+      instance: 127
+    label: Edge
+    unit: 0
+    prec: 0
+    autoOffset: 0
+    filter: 0
+    logs: 1
+    persistent: 0
+    onlyPositive: 0
+    cfg:
+      custom:
+        ratio: 0
+        offset: 0
+  11:
+    type: TYPE_CUSTOM
+    id1:
+      id: 20774
+    subId: 0
+    id2:
+      instance: 127
+    label: Tele
+    unit: 0
+    prec: 0
+    autoOffset: 0
+    filter: 0
+    logs: 1
+    persistent: 0
+    onlyPositive: 0
+    cfg:
+      custom:
+        ratio: 0
+        offset: 0
+screenData:
+  0:
+    LayoutId: Layout2P1
+    layoutData:
+      zones:
+        0:
+          widgetName: ModelBmp
+          widgetData:
+            options:
+              0:
+                type: Color
+                value:
+                  color: 0x105c98
+              2:
+                type: Bool
+                value:
+                  boolValue: 0
+              3:
+                type: Color
+                value:
+                  color: 0xe0ecf0
+              4:
+                type: Bool
+                value:
+                  boolValue: 1
+        1:
+          widgetName: Timer
+          widgetData: ~
+        2:
+          widgetName: Value
+          widgetData:
+            options:
+              0:
+                type: Source
+                value:
+                  source: tele(1)
+              1:
+                type: Color
+                value:
+                  color: 0x000000
+              2:
+                type: Bool
+                value:
+                  boolValue: 1
+      options:
+        0:
+          type: Bool
+          value:
+            boolValue: 1
+        1:
+          type: Bool
+          value:
+            boolValue: 1
+        2:
+          type: Bool
+          value:
+            boolValue: 0
+        3:
+          type: Bool
+          value:
+            boolValue: 0
+        4:
+          type: Bool
+          value:
+            boolValue: 0
+  1:
+    LayoutId: Layout2x1
+    layoutData:
+      zones:
+        0:
+          widgetName: Outputs
+          widgetData:
+            options:
+              0:
+                type: Signed
+                value:
+                  signedValue: 1
+              1:
+                type: Bool
+                value:
+                  boolValue: 1
+              2:
+                type: Color
+                value:
+                  color: 0xf8fcf8
+              3:
+                type: Color
+                value:
+                  color: 0x000000
+              4:
+                type: Color
+                value:
+                  color: 0x105c98
+        1:
+          widgetName: ModelBmp
+          widgetData:
+            options:
+              0:
+                type: Color
+                value:
+                  color: 0x105c98
+              2:
+                type: Bool
+                value:
+                  boolValue: 1
+              3:
+                type: Color
+                value:
+                  color: 0xe0ecf0
+              4:
+                type: Bool
+                value:
+                  boolValue: 1
+      options:
+        0:
+          type: Bool
+          value:
+            boolValue: 1
+        1:
+          type: Bool
+          value:
+            boolValue: 1
+        2:
+          type: Bool
+          value:
+            boolValue: 0
+        3:
+          type: Bool
+          value:
+            boolValue: 0
+        4:
+          type: Bool
+          value:
+            boolValue: 0
+topbarData:
+  zones:
+    0:
+      widgetName: Value
+      widgetData:
+        options:
+          0:
+            type: Source
+            value:
+              source: gv(7)
+          1:
+            type: Color
+            value:
+              color: 0x000000
+          2:
+            type: Bool
+            value:
+              boolValue: 0
+    3:
+      widgetName: Gauge
+      widgetData:
+        options:
+          0:
+            type: Source
+            value:
+              source: TX_VOLTAGE
+          1:
+            type: Signed
+            value:
+              signedValue: 64
+          2:
+            type: Signed
+            value:
+              signedValue: 84
+          3:
+            type: Color
+            value:
+              color: 0x000000
+view: 1
+modelRegistrationID: " 73X5NP-"
