@@ -32,6 +32,8 @@ It has quite a lot of logic and functions.
 
 This sequence protects well against accidental activation, but also quite convenient and reliable (it will not cut you off in flight, see the description for that piece of logic below).
 
+Inspired by this video from [RcVideoReviews](https://www.youtube.com/watch?v=buqQNZVoUXQ)
+
 **Second** - it has a quite accurate flight counter - it counts not just the fact that you turned on the motor. It counts a flight, only if we started with charged battery, working telemetry, and during this session the voltage got below a certain threshold.
 
 This counter is very useful to track your own progress and how well the heli parts last.
